@@ -1,0 +1,15 @@
+
+/*The Light Green, Blue & Red Color Scheme palette has 6 colors which are Very Light Malachite Green (#64E987), Light Green (#92F294), Diamond (#C0F9FA), Light Sky Blue (#88CEFB), Light Red (#FCCCCC) and Salmon Pink (#FF99A9).*/
+.is-centered-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.is-flex-column {
+  flex-direction: column;
+}
+
+.is-flex-row {
+  flex-direction: row;
+}

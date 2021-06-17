@@ -7,9 +7,11 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=26d94f25e087"
   },
   "dependencies": {
+    "bulma": "^0.9.2",
     "core-js": "^3.6.5",
     "vue": "^3.0.0"
   },
@@ -43,7 +45,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": "off" 
+    }
   },
   "browserslist": [
     "> 1%",

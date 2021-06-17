@@ -1,15 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Header v-if="page == 'home' " msg="Welcome to Your Vue.js App"/>
+  <Landing v-if="page == 'landing'" @handleClick="page = $event"/>
+  <Login v-if="page == 'login'"/>
+  <Signup v-if="page == 'signup'"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/header.vue'
+import Landing from './components/static_pages/Landing.vue'
+import Login from './components/static_pages/Login.vue'
+import Signup from './components/static_pages/Signup.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    Login,
+    Landing,
+    Signup
+  },
+  data: function() {
+    return {
+      page: "landing"
+    }
+  },
+  methods: {
+    click: function(){
+      console.log("clicked")
+    }
   }
 }
 </script>
@@ -17,10 +35,7 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  height: 100%;
 }
 </style>
