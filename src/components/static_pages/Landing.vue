@@ -3,7 +3,7 @@
 		<div class="hero-body is-centered-middle">
 			<div class="columns p-5 m-5">
 				<div class="column m-5 p-5">
-					<p class="title is-size-1">musicApp</p>
+					<p class="title is-size-1" style="width:auto; vertical-align:center;">musicApp</p>
 				</div>
 				<div class="column m-5 p-5">
 					<div class="is-centered-middle" style="flex-direction: column;">

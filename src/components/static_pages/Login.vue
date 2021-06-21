@@ -34,20 +34,35 @@
 			</div>
 		</div>
 		<div class="is-centered-middle">
-			<button class="button login boss" style="font-weight: bold;"><i class="fa-fa-login"/>Login</button>
+			<button class="button login boss" style="font-weight: bold;" @click="handleClick('dashboard')"><i class="fa-fa-login"/>Login</button>
 		</div>
 		<hr>
 		<div class="is-centered-middle">
 			<p class="title label" style="font-weight: bold;">Don't have an account?</p>
 		</div>
 		<div class="is-centered-middle pt-1">
-			<button class="button login google" style="font-weight: bold;">Sign up</button>
+			<button class="button login google" style="font-weight: bold;" @click="handleClick('signup')">Sign up</button>
 		</div>
 
 
 	</div>
 
 	</template>
+
+	<script>
+
+		export default {
+			name: "Login",
+			emits: ['handleClick'],
+			methods: {
+				handleClick(value) {
+					console.log(value);
+					this.$emit('handleClick', value)
+				}
+			}
+		}
+
+	</script>
 
 	<style type="text/css" scoped>
 
